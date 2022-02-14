@@ -1,0 +1,15 @@
+package testrunners;
+
+import org.junit.runner.RunWith;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+		features= {"src/test/java/cucumbercourse/features"},
+		glue = {"stepdefinitions"},
+		tags = {"@SmokeTest,@RegularTest"},
+		plugin= {"pretty"})
+public class MenuManagementTest {
+
+}

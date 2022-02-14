@@ -1,0 +1,18 @@
+Feature: Open Accounnt
+
+Scenario: Open Account is successful
+  Given user is on manager page
+  And verify manage page
+  When user click on Open Account button
+  And select <account> and <currency>
+  And click on process button
+  And click ok of alert box
+  Then message is display
+  
+  Scenario: Open Account is not successful
+  Given user is on manager page
+  And verify manage page
+  When user click on Open Account button
+  And select <account>
+  And click on process button
+  Then message is display
